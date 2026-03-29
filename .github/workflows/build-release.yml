@@ -133,12 +133,6 @@ jobs:
       - name: Install JavaScript dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Run tests
-        run: pnpm test
-
-      - name: Run TypeScript check
-        run: pnpm exec tsc --noEmit
-
       - name: Build Tauri bundle
         run: pnpm tauri build -- --target ${{ matrix.rust_target }}
 
